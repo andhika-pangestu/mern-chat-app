@@ -4,8 +4,9 @@ import Conversation from "./Conversation";
 
 const Conversations = () => {
 	const { loading, conversations } = useGetConversations();
+
 	return (
-		<div className='py-2 flex flex-col overflow-auto'>
+		<div className='py-2 flex flex-col overflow-auto bg-purple-50 p-4 rounded-lg shadow-md'>
 			{conversations.map((conversation, idx) => (
 				<Conversation
 					key={conversation._id}
@@ -20,6 +21,7 @@ const Conversations = () => {
 	);
 };
 export default Conversations;
+
 
 // STARTER CODE SNIPPET
 // import Conversation from "./Conversation";
